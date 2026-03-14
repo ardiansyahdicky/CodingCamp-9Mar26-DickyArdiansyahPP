@@ -49,9 +49,6 @@ No installation required! This is a standalone web application.
 # Clone the repository
 git clone https://github.com/ardiansyahdicky/CodingCamp-9Mar26-DickyArdiansyahPP.git
 
-# Navigate to the project directory
-cd productivity-dashboard
-
 # Open in your browser
 open index.html
 ```
