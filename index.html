@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productivity Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+    <span class="theme-icon">🌙</span>
+  </button>
+
+  <main class="dashboard">
+    <!-- Greeting Component -->
+    <header class="greeting-container" id="greeting">
+      <time class="time-display"></time>
+      <time class="date-display"></time>
+      <p class="greeting-text">
+        <span class="greeting-message"></span><span class="user-name"></span>
+        <button class="edit-name-btn" id="edit-name-btn" aria-label="Edit name">✏️</button>
+      </p>
+    </header>
+
+    <!-- Two Column Layout -->
+    <div class="dashboard-grid">
+      <!-- Left Column -->
+      <div class="left-column">
+        <!-- Timer Component -->
+        <section class="timer-container" id="timer" aria-label="Focus Timer">
+          <h2 class="component-title">Focus Timer</h2>
+          <output class="timer-display">25:00</output>
+          <nav class="timer-controls" aria-label="Timer controls">
+            <button class="btn-primary timer-start" type="button">Start</button>
+            <button class="btn-secondary timer-stop" type="button">Stop</button>
+            <button class="btn-reset timer-reset" type="button">Reset</button>
+            <button class="btn-custom timer-custom" type="button">Custom</button>
+          </nav>
+        </section>
+
+        <!-- Quick Links Component -->
+        <section class="quick-links-container" id="quick-links" aria-label="Quick Links">
+          <h2 class="component-title">Quick Links</h2>
+          <form class="link-input-section" aria-label="Add new link">
+            <label for="link-url" class="visually-hidden">Link URL</label>
+            <input type="url" id="link-url" class="link-url" placeholder="URL" aria-label="Link URL">
+            <label for="link-label" class="visually-hidden">Link label</label>
+            <input type="text" id="link-label" class="link-label" placeholder="Label" aria-label="Link label">
+            <button class="btn-primary link-add" type="submit">Add Link</button>
+          </form>
+          <nav aria-label="Quick links navigation">
+            <ul class="link-list" role="list"></ul>
+          </nav>
+        </section>
+      </div>
+
+      <!-- Right Column -->
+      <div class="right-column">
+        <!-- Tasks Component -->
+        <section class="tasks-container" id="tasks" aria-label="Task List">
+          <h2 class="component-title">Tasks</h2>
+          <form class="task-input-section" aria-label="Add new task">
+            <label for="task-input" class="visually-hidden">New task</label>
+            <input type="text" id="task-input" class="task-input" placeholder="Add a new task..." aria-label="Task description">
+            <button class="btn-primary task-add" type="submit">Add</button>
+          </form>
+          <ul class="task-list" role="list"></ul>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
